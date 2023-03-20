@@ -1,0 +1,10 @@
+package com.durga.entities;
+
+public class Account {
+
+	private String accNo;
+	private String accName;
+	private String accType;
+	
+	
+}

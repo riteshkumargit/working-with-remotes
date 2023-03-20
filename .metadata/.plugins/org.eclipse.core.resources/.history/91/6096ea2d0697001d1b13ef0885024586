@@ -1,0 +1,10 @@
+package com.durga.entities;
+
+public class Payment {
+
+	private String tx_id;
+	private String paymentDate;
+	private String paymentAmt;
+	
+	
+}

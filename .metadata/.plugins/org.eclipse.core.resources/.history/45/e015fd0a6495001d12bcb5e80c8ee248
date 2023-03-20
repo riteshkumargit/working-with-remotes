@@ -1,0 +1,60 @@
+package com.durga.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+import com.durga.entities.Account;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Configuration oracleConfiguration =null;
+		Configuration mysqlconfiguration = null;
+		
+		SessionFactory oracleSessionFactory = null;
+		SessionFactory mysqlSessionFactory = null;
+		
+		Session oracleSession = null;
+		Session mysqlSession = null;
+		
+		Transaction oracleOransaction = null;
+		Transaction mysqlOransaction = null;
+		
+		try {
+			oracleConfiguration = new Configuration();
+			oracleConfiguration.configure("oracle_cfg.xml");
+			mysqlconfiguration = new Configuration();
+			mysqlconfiguration.configure("mysql_cfg.xml");
+			
+			StandardServiceRegistryBuilder builder= new StandardServiceRegistryBuilder();
+			builder = builder.applySettings(oracleConfiguration.getProperties());
+			StandardServiceRegistry oracleRegistry = builder.build();
+			oracleSessionFactory = oracleConfiguration.buildSessionFactory(oracleRegistry);
+			
+			builder = builder.applySettings(mysqlconfiguration.getProperties());
+			StandardServiceRegistry mysqlRegistry = builder.build();
+			mysqlSessionFactory = mysqlconfiguration.buildSessionFactory(mysqlRegistry);
+			
+			oracleSession = oracleSessionFactory.openSession();
+			mysqlSession = mysqlSessionFactory.openSession();
+			
+			Account source_Account = (Account) oracleSession.get("com.durga.entities.Account", "abc123");
+			
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+	}
+
+}
+
+

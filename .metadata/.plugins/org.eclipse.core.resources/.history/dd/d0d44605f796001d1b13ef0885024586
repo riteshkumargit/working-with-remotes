@@ -1,0 +1,11 @@
+package com.durga.entities;
+
+public class StudentAccount extends Account {
+
+	private String sid;
+	private String sbranch;
+	private int marks;
+	
+	
+	
+}

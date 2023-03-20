@@ -1,0 +1,10 @@
+package com.durga.entities;
+
+public class Address {
+
+	private String pno;
+	private String street;
+	private String city;
+	
+	
+}

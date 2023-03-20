@@ -1,0 +1,19 @@
+package com.durga.entities;
+
+public class ChequePayment extends Payment {
+
+	private String chequeNo;
+	private int accNo;
+	public String getChequeNo() {
+		return chequeNo;
+	}
+	public void setChequeNo(String chequeNo) {
+		this.chequeNo = chequeNo;
+	}
+	public int getAccNo() {
+		return accNo;
+	}
+	public void setAccNo(int accNo) {
+		this.accNo = accNo;
+	}
+}

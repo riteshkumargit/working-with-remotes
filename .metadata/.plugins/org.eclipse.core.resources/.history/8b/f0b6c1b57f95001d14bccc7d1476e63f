@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<proxool-config>
+	<proxool>
+		<alias>proxool</alias>
+		<driver-class>oracle.jdbc.OracleDriver</driver-class>
+		<driver-url>jdbc:oracle:thin:@localhost:1521:xe</driver-url>
+		<driver-properties>
+			
+		</driver-properties>
+	</proxool>
+</proxool-config>

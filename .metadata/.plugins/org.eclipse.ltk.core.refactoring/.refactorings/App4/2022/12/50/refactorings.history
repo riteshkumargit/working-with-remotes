@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.durga.factories.SessionFactory&apos; to &apos;SessFactory&apos;&#x0D;&#x0A;- Original project: &apos;App4&apos;&#x0D;&#x0A;- Original element: &apos;com.durga.factories.SessionFactory&apos;&#x0D;&#x0A;- Renamed element: &apos;com.durga.factories.SessFactory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SessionFactory&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.durga.factories{SessionFactory.java[SessionFactory" matchStrategy="1" name="SessFactory" qualified="false" references="true" similarDeclarations="false" stamp="1670560981654" textual="false" version="1.0"/>
+</session>

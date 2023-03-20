@@ -1,0 +1,44 @@
+package com.durga.test;
+
+import java.util.Scanner;
+
+import org.hibernate.Filter;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception{
+		
+		try {
+			Configuration configuration = new Configuration();
+			configuration.configure();
+			StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
+			builder = builder.applySettings(configuration.getProperties());
+			StandardServiceRegistry registry = builder.build();
+			SessionFactory sessionFactory = configuration.buildSessionFactory(registry);
+			Session session = sessionFactory.openSession();
+			
+			Query query = session.createQuery("from Employee");
+			Filter filter = session.enableFilter("empFilter");
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Employee Types");
+			System.out.println("1. PERM");
+			System.out.println("2. TEMP");
+			System.out.println("Your Option     :");
+			String etype = scanner.next();
+			filter.setParameter(type, etype);
+			
+			
+			
+		} catch (Exception e) {
+			
+		}
+
+	}
+
+}

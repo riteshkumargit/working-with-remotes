@@ -1,0 +1,8 @@
+package com.durga.entities;
+
+public class EmployeeAccount extends Account {
+
+	private String eid;
+	private float esal;
+	private String eaddr;
+}

@@ -1,0 +1,10 @@
+package com.durga.entities;
+
+public class CardPayment extends Payment {
+
+	private int cardNo;
+	private String exprDate;
+	
+	
+	
+}

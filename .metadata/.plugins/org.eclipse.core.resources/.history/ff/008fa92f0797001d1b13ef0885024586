@@ -1,0 +1,9 @@
+package com.durga.entities;
+
+public class ChequePayment extends Payment {
+
+	private String chequeNo;
+	private String accNo;
+	
+	
+}

@@ -1,0 +1,78 @@
+package com.durga.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+import com.durga.entities.Account;
+import com.durga.entities.Branch;
+import com.durga.entities.Employee;
+import com.durga.entities.Student;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception{
+		
+		Configuration configuration = new Configuration();
+		configuration.configure();
+		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
+		builder = builder.applySettings(configuration.getProperties());
+		StandardServiceRegistry registry = builder.build();
+		SessionFactory sessionFactory = configuration.buildSessionFactory(registry);
+		Session session = sessionFactory.openSession();
+		
+		/*
+		Branch branch = new Branch();
+		branch.setBid("B-111");;
+		branch.setBname("CS");
+		
+		
+		
+		Student student1 = new Student();
+		student1.setSid("S-111");
+		student1.setSname("AAA");
+		student1.setSaddr("Hyd");
+		student1.setBranch(branch);
+		
+		Student student2 = new Student();
+		student2.setSid("S-222");
+		student2.setSname("BBB");
+		student2.setSaddr("Hyd");
+		student2.setBranch(branch);
+		
+		Student student3 = new Student();
+		student3.setSid("S-333");
+		student3.setSname("CCC");
+		student3.setSaddr("Hyd");
+		student3.setBranch(branch);
+		
+		
+		Transaction transaction = session.beginTransaction();
+		session.save(student1);
+		session.save(student2);
+		session.save(student3);
+		transaction.commit();
+		System.out.println("Employee Inserted Successfully");
+		*/
+		
+		
+		Student student = (Student) session.get(Student.class, "S-111");
+		System.out.println("Student Details");
+		System.out.println("-------------------");
+		System.out.println("Student Number      :"+student.getSid());
+		System.out.println("Student Name        :"+student.getSname());
+		System.out.println("Student Address     :"+student.getSaddr());
+		
+		Branch branch = student.getBranch();
+		System.out.println("Branch Details");
+		System.out.println("-------------------");
+		System.out.println("Branch Id     :"+branch.getBid());
+		System.out.println("Branch Name   :"+branch.getBname());
+		session.close();
+		sessionFactory.close();
+	}
+
+}

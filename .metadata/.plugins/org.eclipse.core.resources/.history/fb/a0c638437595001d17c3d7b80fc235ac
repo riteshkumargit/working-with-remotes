@@ -1,0 +1,25 @@
+package com.durga.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Transaction transaction = null;
+		SessionFactory factory = null;
+		Session session = null;
+		
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			// TODO: handle finally clause
+		}
+
+	}
+
+}

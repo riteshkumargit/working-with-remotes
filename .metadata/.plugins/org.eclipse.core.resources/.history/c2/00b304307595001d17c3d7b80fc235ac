@@ -1,0 +1,14 @@
+package com.durga.test;
+
+import org.hibernate.Transaction;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Transaction transaction = null;
+		
+
+	}
+
+}

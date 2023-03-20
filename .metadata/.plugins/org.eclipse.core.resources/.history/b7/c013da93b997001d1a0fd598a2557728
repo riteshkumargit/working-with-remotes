@@ -1,0 +1,16 @@
+package com.durga.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "student")
+public class Student {
+	
+	private String sid;
+	private String sname;
+	private String saddr;
+	
+	
+	
+}

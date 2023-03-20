@@ -1,0 +1,5 @@
+package com.durga.entities;
+
+public class CardPayment extends Payment {
+
+}

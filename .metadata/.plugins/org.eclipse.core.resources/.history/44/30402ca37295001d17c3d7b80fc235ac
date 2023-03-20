@@ -1,0 +1,17 @@
+package com.durga.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp1")
+public class Employee {
+
+	
+	@Id
+	@Column(name="")
+	private int eno;
+	
+	
+}

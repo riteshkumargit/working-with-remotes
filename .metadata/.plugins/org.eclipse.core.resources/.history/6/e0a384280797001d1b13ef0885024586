@@ -1,0 +1,6 @@
+package com.durga.entities;
+
+public class ChequePayment extends Payment {
+
+	
+}
